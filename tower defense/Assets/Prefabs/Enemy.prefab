@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 982833042286555455}
   - component: {fileID: 6568364039177714477}
   m_Layer: 0
-  m_Name: Mushroom Enemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4737519563832372000}
-  moveSpeed: 2
+  moveSpeed: 10
