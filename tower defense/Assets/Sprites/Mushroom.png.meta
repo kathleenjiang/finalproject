@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run (32x32)_0
+      name: Mushroom_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,20 +125,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e93a6a7d14278544b7b85e92613f0be
-      internalID: -509747984
+      spriteID: c96e065a53e93d147bca9307006e1642
+      internalID: -275420022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_1
+      name: Mushroom_1
       rect:
         serializedVersion: 2
         x: 32
@@ -146,20 +146,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d04e928d3ee16244bb2cb7c247d09c4
-      internalID: -409102309
+      spriteID: 66e875e8a3195664395f56a23c2d21d9
+      internalID: 1712974312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_2
+      name: Mushroom_2
       rect:
         serializedVersion: 2
         x: 64
@@ -167,20 +167,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5edc7ae125295264189e14f69aee55fb
-      internalID: 73942647
+      spriteID: 64603eeac7169c44ebaa546c6e82d534
+      internalID: -203084158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_3
+      name: Mushroom_3
       rect:
         serializedVersion: 2
         x: 96
@@ -188,20 +188,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33b999cee2d0a6d4ca04097129ac33d0
-      internalID: -278446041
+      spriteID: f7f1cd7dc363632418140832d3048c6e
+      internalID: 690269351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_4
+      name: Mushroom_4
       rect:
         serializedVersion: 2
         x: 128
@@ -209,20 +209,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb3d6fb62fb8044686c82c75ef62098
-      internalID: -1120646236
+      spriteID: 02c41f4b4d68d3d44bc9f09ac2589da4
+      internalID: -1682159812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_5
+      name: Mushroom_5
       rect:
         serializedVersion: 2
         x: 160
@@ -230,20 +230,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e06b605cd2897047b7afdd6aec237d3
-      internalID: -1403625873
+      spriteID: f52f8e6dda777ea48a3f25a67339d669
+      internalID: 1869341633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_6
+      name: Mushroom_6
       rect:
         serializedVersion: 2
         x: 192
@@ -251,20 +251,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06e976178d001164ba60d4cbc25eee82
-      internalID: 1301015931
+      spriteID: 763943d2d82541e4dbca0bf49fe58793
+      internalID: 491793758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_7
+      name: Mushroom_7
       rect:
         serializedVersion: 2
         x: 224
@@ -272,20 +272,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b07e55121ea16b54f8a1a0b0532c7ac8
-      internalID: 1782054000
+      spriteID: dcacdd2fd53e7674f86e30f9463d764d
+      internalID: 271579467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_8
+      name: Mushroom_8
       rect:
         serializedVersion: 2
         x: 256
@@ -293,20 +293,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28b5fe9e3ed3d484d977aaaaa6f382a1
-      internalID: 735914674
+      spriteID: 48201a995e983b845aefc80cfb8264d5
+      internalID: -1675414425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_9
+      name: Mushroom_9
       rect:
         serializedVersion: 2
         x: 288
@@ -314,20 +314,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 368c9e58486452f489daf0d192cc7554
-      internalID: 2108188570
+      spriteID: 23b1e7ba6342fdf40b7955a7cd8ab989
+      internalID: 506946000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_10
+      name: Mushroom_10
       rect:
         serializedVersion: 2
         x: 320
@@ -335,20 +335,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2583ea447f484e74ab0745962453fab2
-      internalID: -1137547035
+      spriteID: d488408c16633004fa0c11f326f8f34d
+      internalID: -2031030535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_11
+      name: Mushroom_11
       rect:
         serializedVersion: 2
         x: 352
@@ -356,20 +356,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 975ed49f41c7fd546be30ba20fb1198b
-      internalID: -1925001921
+      spriteID: fafc40278555f2b4dba74c2b0a7d7de8
+      internalID: -1089921158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_12
+      name: Mushroom_12
       rect:
         serializedVersion: 2
         x: 384
@@ -377,20 +377,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7db311c5b84434e84a7536bf356857
-      internalID: 1034456029
+      spriteID: 6d3430cfb1099294dabb4844ecc51403
+      internalID: 86149362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_13
+      name: Mushroom_13
       rect:
         serializedVersion: 2
         x: 416
@@ -398,20 +398,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac9b8b0f5f2de347ab4f2189ff08711
-      internalID: 1939731231
+      spriteID: 912e4076aba4fb44d9da74a6175ccde2
+      internalID: -1951105817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_14
+      name: Mushroom_14
       rect:
         serializedVersion: 2
         x: 448
@@ -419,20 +419,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e875dd307cca94aaf0df4f651baab6
-      internalID: -237654220
+      spriteID: 1d05440559db88445907ff85022633da
+      internalID: -2021339399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x32)_15
+      name: Mushroom_15
       rect:
         serializedVersion: 2
         x: 480
@@ -440,14 +440,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85ee7f3c265e304fa963268022d3873
-      internalID: -1993376647
+      spriteID: ccb05bd941d187842ae84cf3c892a776
+      internalID: 2094915342
       vertices: []
       indices: 
       edges: []
@@ -463,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run (32x32)_0: -509747984
-      Run (32x32)_1: -409102309
-      Run (32x32)_10: -1137547035
-      Run (32x32)_11: -1925001921
-      Run (32x32)_12: 1034456029
-      Run (32x32)_13: 1939731231
-      Run (32x32)_14: -237654220
-      Run (32x32)_15: -1993376647
-      Run (32x32)_2: 73942647
-      Run (32x32)_3: -278446041
-      Run (32x32)_4: -1120646236
-      Run (32x32)_5: -1403625873
-      Run (32x32)_6: 1301015931
-      Run (32x32)_7: 1782054000
-      Run (32x32)_8: 735914674
-      Run (32x32)_9: 2108188570
+      Mushroom_0: -275420022
+      Mushroom_1: 1712974312
+      Mushroom_10: -2031030535
+      Mushroom_11: -1089921158
+      Mushroom_12: 86149362
+      Mushroom_13: -1951105817
+      Mushroom_14: -2021339399
+      Mushroom_15: 2094915342
+      Mushroom_2: -203084158
+      Mushroom_3: 690269351
+      Mushroom_4: -1682159812
+      Mushroom_5: 1869341633
+      Mushroom_6: 491793758
+      Mushroom_7: 271579467
+      Mushroom_8: -1675414425
+      Mushroom_9: 506946000
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
