@@ -554,7 +554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194442883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.95, y: 2.26, z: 0}
+  m_LocalPosition: {x: -13.71, y: 2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1298,6 +1298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443414910}
   - component: {fileID: 443414909}
+  - component: {fileID: 443414911}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1347,6 +1348,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443414911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443414908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2a965b1b0c47645b83dd97d388fd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 982833042286555454, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
+  baseEnemies: 8
+  enemiesPerSecond: 0.5
+  timeBetweenWaves: 5
+  difficultyScalingFactor: 0.75
 --- !u!1001 &457883880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4707,63 +4726,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8822587198838932601, guid: 3d62ffe45e625b54b889a11c4bfe84af, type: 3}
   m_PrefabInstance: {fileID: 1393578232}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1395661415
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.462385
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555453, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 982833042286555454, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
-      propertyPath: m_Name
-      value: Mushroom Enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 383220aace85ba34e920c41e7c6a8e9e, type: 3}
 --- !u!1001 &1441393600
 PrefabInstance:
   m_ObjectHideFlags: 0
