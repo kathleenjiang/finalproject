@@ -28,8 +28,17 @@ public class Plot : MonoBehaviour
         Debug.Log("Build tower here" + name);
         if (tower != null) return; 
         //if no tower in plot
-        GameObject towerToBuild = BuildManager.main.getSelectedTower();
-        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+
+        if (towerToBuild.cost > LevelManager.main.gold) {
+            Debug.Log("Not enough gold");
+            return;
+
+        }
+
+        LevelManager.main.SpendCurrency(towerToBuild.cost);
+
+        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
     }
 
 
