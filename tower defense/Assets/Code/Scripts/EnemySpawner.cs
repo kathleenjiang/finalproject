@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour {
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
-    private int currentWave = 1;
+    public int currentWave = 1;
     //keep track of last spawned enemy
     private float timeSinceLastSpawn;
     //keep track of current amount of enemies
@@ -77,7 +77,8 @@ public class EnemySpawner : MonoBehaviour {
 
     private void SpawnEnemy() {
         // Debug.Log("Enemy spawned");
-        GameObject prefabToSpawn = enemyPrefabs[0];
+        int index = Random.Range(0, enemyPrefabs.Length);
+        GameObject prefabToSpawn = enemyPrefabs[index];
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 
