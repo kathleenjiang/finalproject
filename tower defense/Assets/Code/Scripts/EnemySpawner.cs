@@ -5,7 +5,11 @@ using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour {
     [Header("References")]
-    [SerializeField] private GameObject[] enemyPrefabs;
+    // [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private GameObject[] easyEnemies;
+    [SerializeField] private GameObject[] mediumEnemies;
+    [SerializeField] private GameObject[] hardEnemies;
+    [SerializeField] private GameObject[] bossEnemies;
 
     [Header("Attributes")]
     //number of enemies
@@ -72,14 +76,48 @@ public class EnemySpawner : MonoBehaviour {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
+
+        // check for boss wave (20th wave)
+        if (currentWave == 20) {
+            SpawnBoss();
+        }
+
         StartCoroutine(StartWave());
     }
 
+    // private void SpawnEnemy() {
+    //     // Debug.Log("Enemy spawned");
+    //     int index = Random.Range(0, enemyPrefabs.Length);
+    //     GameObject prefabToSpawn = enemyPrefabs[index];
+    //     Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+    // }
+
     private void SpawnEnemy() {
-        // Debug.Log("Enemy spawned");
-        int index = Random.Range(0, enemyPrefabs.Length);
-        GameObject prefabToSpawn = enemyPrefabs[index];
+        int index;
+        GameObject prefabToSpawn;
+
+        // Determine enemy type based on wave difficulty
+        if (currentWave <= 2) {
+            index = Random.Range(0, easyEnemies.Length);
+            prefabToSpawn = easyEnemies[index];
+        }
+        else if (currentWave <= 5) {
+            index = Random.Range(0, mediumEnemies.Length);
+            prefabToSpawn = mediumEnemies[index];
+        }
+        else {
+            index = Random.Range(0, hardEnemies.Length);
+            prefabToSpawn = hardEnemies[index];
+        }
+
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+    }
+
+    private void SpawnBoss() {
+        // Spawn boss prefab
+        int index = Random.Range(0, bossEnemies.Length);
+        GameObject bossPrefab = bossEnemies[index];
+        Instantiate(bossPrefab, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 
     //progressively increase difficulty per wave
