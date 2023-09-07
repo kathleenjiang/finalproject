@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
     [Header("References")]
@@ -29,13 +30,21 @@ public class EnemySpawner : MonoBehaviour {
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    [SerializeField] GameObject victoryMenu;
+
+    private enum GameState {
+        Playing,
+        Finished
+    }
+
+    private GameState gameState = GameState.Playing;
 
     private void Awake() {
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
     private void Start() {
-        // StartWave();
+        victoryMenu.SetActive(false);
         StartCoroutine(StartWave());
     }
 
@@ -55,16 +64,20 @@ public class EnemySpawner : MonoBehaviour {
         if (enemiesAlive == 0 && enemiesLeftToSpawn == 0) {
             EndWave();
         }
+
+        if (gameState == GameState.Finished && enemiesAlive == 0 && enemiesLeftToSpawn == 0) {
+            Victory();
+        }
+    }
+
+    private void Victory() {
+        victoryMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     private void EnemyDestroyed() {
         enemiesAlive--;
     }
-
-    // private void StartWave() {
-    //     isSpawning = true;
-    //     enemiesLeftToSpawn = EnemiesPerWave();
-    // }
 
     private IEnumerator StartWave() {
         yield return new WaitForSeconds(timeBetweenWaves);
@@ -82,15 +95,12 @@ public class EnemySpawner : MonoBehaviour {
             SpawnBoss();
         }
 
+        if (currentWave > 20) {
+            gameState = GameState.Finished;
+        }
+
         StartCoroutine(StartWave());
     }
-
-    // private void SpawnEnemy() {
-    //     // Debug.Log("Enemy spawned");
-    //     int index = Random.Range(0, enemyPrefabs.Length);
-    //     GameObject prefabToSpawn = enemyPrefabs[index];
-    //     Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
-    // }
 
     private void SpawnEnemy() {
         int index;
