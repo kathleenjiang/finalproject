@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 2133024620828359491}
   - component: {fileID: 2617960594044662887}
   - component: {fileID: 7053659347861714514}
+  - component: {fileID: 3026317800612794352}
   m_Layer: 5
   m_Name: Upgrade UI Canvas
   m_TagString: Untagged
@@ -536,6 +537,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3026317800612794352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715573005535045193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e776b847bfcb23642983aa44c95d4e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4825153526470228332
 GameObject:
   m_ObjectHideFlags: 0

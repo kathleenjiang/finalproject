@@ -17,11 +17,25 @@ public class Turret : MonoBehaviour {
     [Header("Attribute")]
     [SerializeField] public float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
-    [SerializeField] private float bps = 1f;     //bullets per second
+    [SerializeField] private float bps = 1f;     //attack per second
+    [SerializeField] private int upgradeCost = 100;
+
+    private float bpsBase;
+    private float targetingRangeBase;
 
 
     private Transform target;
     private float timeUntilFire;
+
+    private int level = 1;
+
+    private void Start() {
+        //upgrade
+        bpsBase = bps;
+        targetingRangeBase = targetingRange;
+
+        upgradeButton.onClick.AddListener(UpgradeTurret);
+    }
 
     // Update is called once per frame
     private void Update() {
@@ -82,6 +96,35 @@ public class Turret : MonoBehaviour {
 
     public void CloseUpgradeUI() {
         upgradeUI.SetActive(false);
+    }
+
+    public void UpgradeTurret() {
+        if (CalculateCost() > LevelManager.main.gold) return;
+
+        LevelManager.main.SpendCurrency(CalculateCost());
+
+        level++;
+
+        bps = CalculateBPS();
+        targetingRange = CalculateRange();
+
+        CloseUpgradeUI();
+        Debug.Log("New attack:" + bps);
+        Debug.Log("New range:" + targetingRange);
+        Debug.Log("New cost:" + CalculateCost());
+
+    }
+
+    private float CalculateBPS() {
+        return bpsBase * Mathf.Pow(level, 0.5f);
+    }
+
+    private float CalculateRange() {
+        return targetingRangeBase * Mathf.Pow(level, 0.4f);
+    }
+
+    private int CalculateCost() {
+        return Mathf.RoundToInt(upgradeCost * Mathf.Pow(level, 0.75f));
     }
 
     private void OnDrawGizmosSelected() {

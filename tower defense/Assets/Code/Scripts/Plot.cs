@@ -26,7 +26,10 @@ public class Plot : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        Debug.Log("Build tower here" + name);
+        // Debug.Log("Build tower here" + name);
+
+        if (UIManager.main.IsHoveringUI()) return;
+        
         if (tower != null) {
             turret.UpgradeUI();
             return;

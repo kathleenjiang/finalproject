@@ -38869,6 +38869,7 @@ GameObject:
   - component: {fileID: 2132251344}
   - component: {fileID: 2132251345}
   - component: {fileID: 2132251346}
+  - component: {fileID: 2132251347}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -38967,6 +38968,18 @@ MonoBehaviour:
   - name: Ice Turret
     cost: 50
     prefab: {fileID: 3536443575802085437, guid: 849ee22620be3cf4a831d40b2f1e22f4, type: 3}
+--- !u!114 &2132251347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132251342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b498b39b9498aa0418753d93cf57bd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2134498513
 GameObject:
   m_ObjectHideFlags: 0
