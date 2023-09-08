@@ -7,11 +7,13 @@ public class IceTower : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject slowEffectPrefab;
 
     [Header("Attribute")]   
     [SerializeField] public float targetingRange = 5f;
     [SerializeField] private float attackSpeed = 4f;    //attacks per second
     [SerializeField] private float freezeTime = 1f;
+
 
     private float timeUntilFire;
 
@@ -34,6 +36,10 @@ public class IceTower : MonoBehaviour
 
                 EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
                 em.UpdateSpeed(0.5f);
+
+                GameObject slowEffect = Instantiate(slowEffectPrefab, em.transform.position, Quaternion.identity);
+                Destroy(slowEffect, freezeTime);
+
 
                 StartCoroutine(ResetEnemySpeed(em));
 
