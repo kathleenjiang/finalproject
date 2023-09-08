@@ -13,13 +13,8 @@ public class Tower {
         cost = _cost;
         prefab = _prefab;
     }
-
-    // public void RemoveTower() {
-    //     Destroy(gameObject);
-    // }
-
-    // public int GetCost() {
-    //     return cost;
+    // public void SellTower() {
+    //     BuildManager.main.SellTurret(this);
     // }
   
 }

@@ -18,7 +18,6 @@ public class Plot : MonoBehaviour
 
     private void OnMouseEnter() {
         sr.color = hoverColor;
-
     }
 
     private void OnMouseExit() {
@@ -48,6 +47,5 @@ public class Plot : MonoBehaviour
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         turret = tower.GetComponent<Turret>();
     }
-
 
 }

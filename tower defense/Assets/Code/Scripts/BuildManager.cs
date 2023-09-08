@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BuildManager : MonoBehaviour
 {
@@ -15,7 +17,9 @@ public class BuildManager : MonoBehaviour
 
     private void Awake() {
         main = this;
+    }
 
+    private void Start() { 
     }
 
     public Tower GetSelectedTower() {

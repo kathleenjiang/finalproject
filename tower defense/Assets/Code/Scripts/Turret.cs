@@ -12,9 +12,12 @@ public class Turret : MonoBehaviour {
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
+
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private TextMeshProUGUI costText;
+
+    [SerializeField] private TextMeshProUGUI sellCostTextMesh;
 
     [Header("Attribute")]
     [SerializeField] public float targetingRange = 5f;
@@ -103,6 +106,7 @@ public class Turret : MonoBehaviour {
 
     public void UpgradeTurret() {
         int cost = CalculateCost();
+        int nextUpgradeCost = CalculateNextUpgradeCost();
         if (cost > LevelManager.main.gold) return;
 
         LevelManager.main.SpendCurrency(cost);
@@ -118,7 +122,7 @@ public class Turret : MonoBehaviour {
         Debug.Log("New cost:" + cost);
 
         if (costText != null) {
-            costText.text = "$" + cost.ToString(); // display cost 
+            costText.text = "$" + nextUpgradeCost.ToString(); // cost ui 
         }
     }
 
@@ -134,10 +138,26 @@ public class Turret : MonoBehaviour {
         return Mathf.RoundToInt(upgradeCost * Mathf.Pow(level, 0.75f));
     }
 
+    private int CalculateNextUpgradeCost() {
+        return Mathf.RoundToInt(upgradeCost * Mathf.Pow(level + 1, 0.75f)); // to display next upgrade cost
+    }
+
+    public int CalculateSell() {
+        return Mathf.RoundToInt(upgradeCost * 0.75f); // You can adjust the sell value calculation as needed
+    }
+
     private void OnDrawGizmosSelected() {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
+
+    // public void SellTurret() {
+    //     // Implement the logic for selling the turret here
+    //     // For example, you can destroy the turret object and increase the player's currency
+    //     int sellValue = CalculateSell(); // Calculate the sell value
+    //     LevelManager.main.IncreaseCurrency(sellValue); // Increase player's currency
+    //     Destroy(gameObject); // Destroy the turret object
+    // }
 
 }
 
