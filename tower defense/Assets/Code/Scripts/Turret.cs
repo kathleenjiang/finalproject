@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using TMPro;
 
 public class Turret : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class Turret : MonoBehaviour {
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
+    [SerializeField] private TextMeshProUGUI costText;
 
     [Header("Attribute")]
     [SerializeField] public float targetingRange = 5f;
@@ -60,7 +62,7 @@ public class Turret : MonoBehaviour {
     }
 
     private void Shoot() {
-        Debug.Log("Shoot");
+        // Debug.Log("Shoot");
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
@@ -96,12 +98,14 @@ public class Turret : MonoBehaviour {
 
     public void CloseUpgradeUI() {
         upgradeUI.SetActive(false);
+        UIManager.main.SetHoveringState(false);
     }
 
     public void UpgradeTurret() {
-        if (CalculateCost() > LevelManager.main.gold) return;
+        int cost = CalculateCost();
+        if (cost > LevelManager.main.gold) return;
 
-        LevelManager.main.SpendCurrency(CalculateCost());
+        LevelManager.main.SpendCurrency(cost);
 
         level++;
 
@@ -111,8 +115,11 @@ public class Turret : MonoBehaviour {
         CloseUpgradeUI();
         Debug.Log("New attack:" + bps);
         Debug.Log("New range:" + targetingRange);
-        Debug.Log("New cost:" + CalculateCost());
+        Debug.Log("New cost:" + cost);
 
+        if (costText != null) {
+            costText.text = "$" + cost.ToString(); // display cost 
+        }
     }
 
     private float CalculateBPS() {
