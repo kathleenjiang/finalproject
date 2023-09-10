@@ -12,9 +12,5 @@ public class Tower {
         name = _name;
         cost = _cost;
         prefab = _prefab;
-    }
-    // public void SellTower() {
-    //     BuildManager.main.SellTurret(this);
-    // }
-  
+    }  
 }

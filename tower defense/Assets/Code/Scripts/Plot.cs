@@ -26,6 +26,7 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown() {
         // Debug.Log("Build tower here" + name);
+        Debug.Log(turret == null);
 
         if (UIManager.main.IsHoveringUI()) return;
         
@@ -39,13 +40,20 @@ public class Plot : MonoBehaviour
         if (towerToBuild.cost > LevelManager.main.gold) {
             Debug.Log("Not enough gold");
             return;
-
         }
 
-        LevelManager.main.SpendCurrency(towerToBuild.cost);
+        // Reset plot's tower and turret before building a new one
+        ResetPlot();
 
+        LevelManager.main.SpendCurrency(towerToBuild.cost);
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         turret = tower.GetComponent<Turret>();
+
+    }
+
+    public void ResetPlot() {
+        tower = null;
+        turret = null;
     }
 
 }

@@ -27,7 +27,7 @@ public class Turret : MonoBehaviour {
 
     private float bpsBase;
     private float targetingRangeBase;
-
+    private Plot plot;
 
     private Transform target;
     private float timeUntilFire;
@@ -152,11 +152,17 @@ public class Turret : MonoBehaviour {
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
 
-    public void SellTurret() {
-        int sellValue = CalculateSell(); // Calculate the sell value
-        LevelManager.main.IncreaseCurrency(sellValue); // Increase player's currency
-        Destroy(gameObject); // Destroy the turret object
+    public void SetPlot(Plot plotReference) {
+        plot = plotReference;
     }
+
+    public void SellTurret() {
+        // Debug.Log(turret == null);
+        int sellValue = CalculateSell(); 
+        LevelManager.main.IncreaseCurrency(sellValue); 
+        plot.ResetPlot();
+        Destroy(gameObject); // delete turret
+    } 
 
 }
 
