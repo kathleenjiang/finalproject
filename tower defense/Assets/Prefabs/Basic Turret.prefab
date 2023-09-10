@@ -543,8 +543,9 @@ MonoBehaviour:
   firingPoint: {fileID: 3019320755533898004}
   upgradeUI: {fileID: 3715573005535045193}
   upgradeButton: {fileID: 1523300787999990462}
+  sellButton: {fileID: 6162772532936017718}
   costText: {fileID: 713734541148405106}
-  sellCostTextMesh: {fileID: 0}
+  sellText: {fileID: 8552193775505461307}
   targetingRange: 2
   rotationSpeed: 200
   bps: 1

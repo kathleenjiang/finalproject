@@ -15,9 +15,9 @@ public class Turret : MonoBehaviour {
 
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
+    [SerializeField] private Button sellButton;
     [SerializeField] private TextMeshProUGUI costText;
-
-    [SerializeField] private TextMeshProUGUI sellCostTextMesh;
+    [SerializeField] private TextMeshProUGUI sellText;
 
     [Header("Attribute")]
     [SerializeField] public float targetingRange = 5f;
@@ -40,6 +40,7 @@ public class Turret : MonoBehaviour {
         targetingRangeBase = targetingRange;
 
         upgradeButton.onClick.AddListener(UpgradeTurret);
+        sellButton.onClick.AddListener(SellTurret);
     }
 
     // Update is called once per frame
@@ -143,7 +144,7 @@ public class Turret : MonoBehaviour {
     }
 
     public int CalculateSell() {
-        return Mathf.RoundToInt(upgradeCost * 0.75f); // You can adjust the sell value calculation as needed
+        return Mathf.RoundToInt(upgradeCost * 0.5f); 
     }
 
     private void OnDrawGizmosSelected() {
@@ -151,13 +152,11 @@ public class Turret : MonoBehaviour {
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
 
-    // public void SellTurret() {
-    //     // Implement the logic for selling the turret here
-    //     // For example, you can destroy the turret object and increase the player's currency
-    //     int sellValue = CalculateSell(); // Calculate the sell value
-    //     LevelManager.main.IncreaseCurrency(sellValue); // Increase player's currency
-    //     Destroy(gameObject); // Destroy the turret object
-    // }
+    public void SellTurret() {
+        int sellValue = CalculateSell(); // Calculate the sell value
+        LevelManager.main.IncreaseCurrency(sellValue); // Increase player's currency
+        Destroy(gameObject); // Destroy the turret object
+    }
 
 }
 
