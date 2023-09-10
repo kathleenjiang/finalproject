@@ -31,7 +31,9 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    [Header("UI audio")]
     [SerializeField] GameObject victoryMenu;
+    [SerializeField] AudioSource winSoundEffect;
 
     private enum GameState
     {
@@ -81,6 +83,7 @@ public class EnemySpawner : MonoBehaviour
     private void Victory()
     {
         victoryMenu.SetActive(true);
+        winSoundEffect.Play();
         Time.timeScale = 0f;
     }
 
@@ -102,13 +105,12 @@ public class EnemySpawner : MonoBehaviour
         timeSinceLastSpawn = 0f;
         currentWave++;
 
-        // check for boss wave (20th wave)
-        if (currentWave == 20)
+        if (currentWave == 7)
         {
             SpawnBoss();
         }
 
-        if (currentWave > 20)
+        if (currentWave > 7 && enemiesAlive == 0 && enemiesLeftToSpawn == 0)
         {
             gameState = GameState.Finished;
         }

@@ -17,6 +17,9 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] GameObject gameOverMenu;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource loseSoundEffect;
+
     private void Awake()
     {
         main = this;
@@ -46,6 +49,7 @@ public class LevelManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         gameOverMenu.SetActive(true);
+        loseSoundEffect.Play();
     }
 
     public void RestartGame()
