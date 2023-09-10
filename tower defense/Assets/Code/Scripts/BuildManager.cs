@@ -6,7 +6,6 @@ using TMPro;
 
 public class BuildManager : MonoBehaviour
 {
-
     public static BuildManager main;
 
     [Header("References")]
@@ -14,19 +13,22 @@ public class BuildManager : MonoBehaviour
 
     private int selectedTower = 0;
 
-    private void Awake() {
+    private void Awake()
+    {
         main = this;
     }
 
-    private void Start() { 
+    private void Start()
+    {
     }
 
-    public Tower GetSelectedTower() {
-        // return towerPrefabs[selectedTower];
+    public Tower GetSelectedTower()
+    {
         return towers[selectedTower];
     }
 
-    public void SetSelectedTower(int _selectedTower) {
+    public void SetSelectedTower(int _selectedTower)
+    {
         selectedTower = _selectedTower;
     }
 

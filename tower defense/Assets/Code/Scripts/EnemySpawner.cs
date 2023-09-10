@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class EnemySpawner : MonoBehaviour {
+public class EnemySpawner : MonoBehaviour
+{
     [Header("References")]
     // [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private GameObject[] easyEnemies;
@@ -32,90 +33,107 @@ public class EnemySpawner : MonoBehaviour {
     private bool isSpawning = false;
     [SerializeField] GameObject victoryMenu;
 
-    private enum GameState {
+    private enum GameState
+    {
         Playing,
         Finished
     }
 
     private GameState gameState = GameState.Playing;
 
-    private void Awake() {
+    private void Awake()
+    {
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
-    private void Start() {
+    private void Start()
+    {
         victoryMenu.SetActive(false);
         StartCoroutine(StartWave());
     }
 
-    private void Update() {
+    private void Update()
+    {
         //if not spawning, nothing will run
         if (!isSpawning) return;
 
         timeSinceLastSpawn += Time.deltaTime;
-        
-        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0) {
+
+        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0)
+        {
             SpawnEnemy();
             enemiesLeftToSpawn--;
             enemiesAlive++;
             timeSinceLastSpawn = 0f;
         }
 
-        if (enemiesAlive == 0 && enemiesLeftToSpawn == 0) {
+        if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        {
             EndWave();
         }
 
-        if (gameState == GameState.Finished && enemiesAlive == 0 && enemiesLeftToSpawn == 0) {
+        if (gameState == GameState.Finished && enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        {
             Victory();
         }
     }
 
-    private void Victory() {
+    private void Victory()
+    {
         victoryMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    private void EnemyDestroyed() {
+    private void EnemyDestroyed()
+    {
         enemiesAlive--;
     }
 
-    private IEnumerator StartWave() {
+    private IEnumerator StartWave()
+    {
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
     }
 
-    private void EndWave() {
+    private void EndWave()
+    {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
 
         // check for boss wave (20th wave)
-        if (currentWave == 20) {
+        if (currentWave == 20)
+        {
             SpawnBoss();
         }
 
-        if (currentWave > 20) {
+        if (currentWave > 20)
+        {
             gameState = GameState.Finished;
         }
 
         StartCoroutine(StartWave());
     }
 
-    private void SpawnEnemy() {
+    private void SpawnEnemy()
+    {
         int index;
         GameObject prefabToSpawn;
 
         // Determine enemy type based on wave difficulty
-        if (currentWave <= 2) {
+        if (currentWave <= 2)
+        {
             index = Random.Range(0, easyEnemies.Length);
             prefabToSpawn = easyEnemies[index];
         }
-        else if (currentWave <= 5) {
+        else if (currentWave <= 5)
+        {
             index = Random.Range(0, mediumEnemies.Length);
             prefabToSpawn = mediumEnemies[index];
         }
-        else {
+        else
+        {
             index = Random.Range(0, hardEnemies.Length);
             prefabToSpawn = hardEnemies[index];
         }
@@ -123,7 +141,8 @@ public class EnemySpawner : MonoBehaviour {
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 
-    private void SpawnBoss() {
+    private void SpawnBoss()
+    {
         // Spawn boss prefab
         int index = Random.Range(0, bossEnemies.Length);
         GameObject bossPrefab = bossEnemies[index];
@@ -131,7 +150,8 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     //progressively increase difficulty per wave
-    private int EnemiesPerWave() {
+    private int EnemiesPerWave()
+    {
         return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
     }
 }

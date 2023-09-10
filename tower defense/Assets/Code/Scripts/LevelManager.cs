@@ -17,18 +17,21 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] GameObject gameOverMenu;
 
-    private void Awake() {
+    private void Awake()
+    {
         main = this;
     }
 
-    private void Start() {
+    private void Start()
+    {
         //initial player stats
         gold = 100;
         health = 50;
         gameOverMenu.SetActive(false);
     }
 
-    public void PlayerTakeDamage(int damage) {
+    public void PlayerTakeDamage(int damage)
+    {
         health -= damage;
 
         if (health <= 0)
@@ -39,7 +42,8 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void GameOver() {
+    private void GameOver()
+    {
         Time.timeScale = 0f;
         gameOverMenu.SetActive(true);
     }
@@ -50,23 +54,28 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void Home(int sceneID) 
+    public void Home(int sceneID)
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
     }
 
-    public void IncreaseCurrency(int amount) {
+    public void IncreaseCurrency(int amount)
+    {
         gold += amount;
     }
 
     //if player is able to buy return, else false
-    public bool SpendCurrency(int amount) {
-        if (amount <= gold) {
+    public bool SpendCurrency(int amount)
+    {
+        if (amount <= gold)
+        {
             // buy tower
             gold -= amount;
             return true;
-        } else {
+        }
+        else
+        {
             Debug.Log("Insufficient Funds");
             return false;
         }

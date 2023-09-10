@@ -10,12 +10,14 @@ public class Menu : MonoBehaviour
     [SerializeField] TextMeshProUGUI currencyUI;
     [SerializeField] TextMeshProUGUI healthUI;
 
-    private void OnGUI() {
+    private void OnGUI()
+    {
         currencyUI.text = LevelManager.main.gold.ToString();
         healthUI.text = LevelManager.main.health.ToString();
     }
 
-    public void SetSelected() {
-        
+    public void SetSelected()
+    {
+
     }
 }

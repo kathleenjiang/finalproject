@@ -8,51 +8,55 @@ public class Plot : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
 
-    public GameObject tower;
+    // public Tower tower;
     public Turret turret;
     private Color startColor;
 
-    private void Start() {
+    private void Start()
+    {
         startColor = sr.color;
     }
 
-    private void OnMouseEnter() {
+    private void OnMouseEnter()
+    {
         sr.color = hoverColor;
     }
 
-    private void OnMouseExit() {
+    private void OnMouseExit()
+    {
         sr.color = startColor;
     }
 
-    private void OnMouseDown() {
+    private void OnMouseDown()
+    {
         // Debug.Log("Build tower here" + name);
-        Debug.Log(turret == null);
+        // Debug.Log(turret == null);
 
-        if (UIManager.main.IsHoveringUI()) return;
-        
-        if (tower != null) {
+        if (turret != null)
+        {
             turret.UpgradeUI();
             return;
-        } 
+        }
         //if no tower in plot
         Tower towerToBuild = BuildManager.main.GetSelectedTower();
 
-        if (towerToBuild.cost > LevelManager.main.gold) {
+        if (towerToBuild.cost > LevelManager.main.gold)
+        {
             Debug.Log("Not enough gold");
             return;
         }
 
-        // Reset plot's tower and turret before building a new one
         ResetPlot();
 
         LevelManager.main.SpendCurrency(towerToBuild.cost);
-        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
-        turret = tower.GetComponent<Turret>();
+        GameObject go = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        turret = go.GetComponentInChildren<Turret>();
+        turret.SetPlot(this);
 
     }
 
-    public void ResetPlot() {
-        tower = null;
+    public void ResetPlot()
+    {
         turret = null;
     }
 

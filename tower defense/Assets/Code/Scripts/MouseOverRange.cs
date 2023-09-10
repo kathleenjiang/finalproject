@@ -6,17 +6,20 @@ public class MouseOverRange : MonoBehaviour
 {
     private SpriteRenderer targetingRangeCircle;
 
-    private void Start() {
+    private void Start()
+    {
         targetingRangeCircle = GetComponentInChildren<SpriteRenderer>();
         targetingRangeCircle.enabled = false; //hide targeting range
     }
 
-    private void OnMouseEnter() {
+    private void OnMouseEnter()
+    {
         // on mouse over
         targetingRangeCircle.enabled = true;
     }
 
-    private void OnMouseExit() {
+    private void OnMouseExit()
+    {
         targetingRangeCircle.enabled = false;
     }
 }

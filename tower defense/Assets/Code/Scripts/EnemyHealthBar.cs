@@ -6,7 +6,7 @@
 // public class EnemyHealthBar : MonoBehaviour
 // {
 //     private Slider _healthSlider;
-    
+
 //     private void Awake() {
 //         _healthSlider = GetComponent<Slider>();
 //     }

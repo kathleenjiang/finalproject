@@ -14,27 +14,33 @@ public class Health : MonoBehaviour
 
     private bool isDestroyed = false;
 
-     private void Start() {
+    private void Start()
+    {
         InitializeHealthSlider();
     }
 
-    private void InitializeHealthSlider() {
-        if (healthSlider != null) {
+    private void InitializeHealthSlider()
+    {
+        if (healthSlider != null)
+        {
             healthSlider.maxValue = hitPoints;
             healthSlider.value = hitPoints;
         }
     }
 
-    public void TakeDamage(int dmg) {
+    public void TakeDamage(int dmg)
+    {
         hitPoints -= dmg;
 
-        if (healthSlider != null) {
+        if (healthSlider != null)
+        {
             healthSlider.value = hitPoints;
         }
 
-        if (hitPoints <= 0 && !isDestroyed) {
+        if (hitPoints <= 0 && !isDestroyed)
+        {
             EnemySpawner.onEnemyDestroy.Invoke();
-            LevelManager.main.IncreaseCurrency(currencyWorth); 
+            LevelManager.main.IncreaseCurrency(currencyWorth);
             isDestroyed = true;
             Destroy(gameObject);
         }
