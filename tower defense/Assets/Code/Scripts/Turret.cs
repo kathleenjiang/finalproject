@@ -27,6 +27,11 @@ public class Turret : MonoBehaviour
     [SerializeField] private int upgradeCost = 100;
     [SerializeField] private int sellValue;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource hitSoundEffect;
+    [SerializeField] AudioSource upgradeSoundEffect;
+    [SerializeField] AudioSource sellSoundEffect;
+
     private float bpsBase;
     private float targetingRangeBase;
     private Plot plot;
@@ -68,6 +73,7 @@ public class Turret : MonoBehaviour
             if (timeUntilFire >= 1f / bps)
             {
                 Shoot();
+                hitSoundEffect.Play();
                 timeUntilFire = 0f;
             }
         }
@@ -133,11 +139,8 @@ public class Turret : MonoBehaviour
 
         bps = CalculateBPS();
         targetingRange = CalculateRange();
-
+        upgradeSoundEffect.Play();
         CloseUpgradeUI();
-        // Debug.Log("New attack:" + bps);
-        // Debug.Log("New range:" + targetingRange);
-        // Debug.Log("New cost:" + cost);
 
         if (costText != null)
         {
@@ -192,7 +195,18 @@ public class Turret : MonoBehaviour
         }
 
         plot.ResetPlot();
-        Destroy(gameObject); // delete turret
+        StartCoroutine(playAudioAndDestroy());
+        // Destroy(gameObject); // delete turret
+    }
+
+    IEnumerator playAudioAndDestroy()
+    {
+        sellSoundEffect.Play();
+        while (sellSoundEffect.isPlaying)
+        {
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 
 }

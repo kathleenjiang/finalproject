@@ -10,6 +10,9 @@ public class EnemyMovement : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float moveSpeed = 2f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource dmgSoundEffect;
+
     private Transform target;
     private int pathIndex = 0;
 
@@ -31,7 +34,8 @@ public class EnemyMovement : MonoBehaviour
             {
                 //call enemy destroy function
                 EnemySpawner.onEnemyDestroy.Invoke();
-                LevelManager.main.PlayerTakeDamage(10); //player takes damage
+                dmgSoundEffect.Play();
+                LevelManager.main.PlayerTakeDamage(10); //player loses health
                 Destroy(gameObject);
                 return;
             }

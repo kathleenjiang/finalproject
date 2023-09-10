@@ -13,6 +13,10 @@ public class Health : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] private GameObject deathPrefab;
 
+    [Header("Audio")]
+    [SerializeField] public AudioSource deathSoundEffect;
+
+
     private bool isDestroyed = false;
 
     private void Start()
@@ -42,11 +46,22 @@ public class Health : MonoBehaviour
         {
             GameObject deathEffect = Instantiate(deathPrefab, transform.position, Quaternion.identity);
             Destroy(deathEffect, 1f);
-
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
             isDestroyed = true;
-            Destroy(gameObject);
+            StartCoroutine(playAudioAndDestroy()); // wait for the audio to finish playing before destroying go
+
+            // Destroy(gameObject);
         }
+    }
+
+    IEnumerator playAudioAndDestroy()
+    {
+        deathSoundEffect.Play();
+        while (deathSoundEffect.isPlaying)
+        {
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }
