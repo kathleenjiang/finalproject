@@ -11,6 +11,7 @@ public class Plot : MonoBehaviour
     // public Tower tower;
     public Turret turret;
     private Color startColor;
+    public IceTower iceTower;
 
     private void Start()
     {
@@ -52,7 +53,6 @@ public class Plot : MonoBehaviour
         GameObject go = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         turret = go.GetComponentInChildren<Turret>();
         turret.SetPlot(this);
-
     }
 
     public void ResetPlot()

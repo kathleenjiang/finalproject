@@ -25,6 +25,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] private float bps = 1f;     //attack per second
     [SerializeField] private int upgradeCost = 100;
+    [SerializeField] private int sellValue;
 
     private float bpsBase;
     private float targetingRangeBase;
@@ -184,6 +185,12 @@ public class Turret : MonoBehaviour
     {
         int sellValue = CalculateSell();
         LevelManager.main.IncreaseCurrency(sellValue);
+
+        if (sellText != null)
+        {
+            sellText.text = "$" + sellValue.ToString();
+        }
+
         plot.ResetPlot();
         Destroy(gameObject); // delete turret
     }
