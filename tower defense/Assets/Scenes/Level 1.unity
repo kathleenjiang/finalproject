@@ -27078,6 +27078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2794044714210055304, guid: 3d62ffe45e625b54b889a11c4bfe84af, type: 3}
+      propertyPath: logText
+      value: 
+      objectReference: {fileID: 2473420635633734450, guid: c884aae080dd67a4e868725e196ee04f, type: 3}
     - target: {fileID: 4478352091197809620, guid: 3d62ffe45e625b54b889a11c4bfe84af, type: 3}
       propertyPath: m_SortingLayer
       value: 4
@@ -39791,11 +39795,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   easyEnemies:
+  - {fileID: 3435962575939222057, guid: ed638a4c04ae96846b5e2cebfd4f28d0, type: 3}
   - {fileID: 3435962575939222057, guid: 52e2b11620bf4b342b1826bb58d66f9e, type: 3}
+  - {fileID: 3435962575939222057, guid: 52e2b11620bf4b342b1826bb58d66f9e, type: 3}
+  - {fileID: 3435962575939222057, guid: 0cc008299d5938443a187318dae3ca01, type: 3}
   mediumEnemies:
+  - {fileID: 3435962575939222057, guid: 6767723a2b7788041898b49846f9b52f, type: 3}
+  - {fileID: 3435962575939222057, guid: 1dcaad43aad1e1549b3959702e4a5895, type: 3}
+  - {fileID: 3435962575939222057, guid: fbda95ec76dafe3499f49e86e65fbc98, type: 3}
+  - {fileID: 3435962575939222057, guid: 31ec235526eccf64f99992736c441f49, type: 3}
+  hardEnemies:
   - {fileID: 2003930477275005993, guid: fca937164a98d8b4d85b2e395fce3a55, type: 3}
-  hardEnemies: []
-  bossEnemies: []
+  - {fileID: 3435962575939222057, guid: f73b7e36fcd6e30418ce3953c70f2e62, type: 3}
+  - {fileID: 3435962575939222057, guid: f78a2bbe5a5cb9d4bbf301ef01ed4073, type: 3}
+  bossEnemies:
+  - {fileID: 3435962575939222057, guid: 6b507752996b2ee49ad0f01e19afeb4a, type: 3}
   baseEnemies: 4
   enemiesPerSecond: 0.5
   timeBetweenWaves: 2

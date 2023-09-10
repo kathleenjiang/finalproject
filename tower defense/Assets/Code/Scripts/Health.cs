@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Slider healthSlider;
+    [SerializeField] private GameObject deathPrefab;
 
     private bool isDestroyed = false;
 
@@ -39,6 +40,9 @@ public class Health : MonoBehaviour
 
         if (hitPoints <= 0 && !isDestroyed)
         {
+            GameObject deathEffect = Instantiate(deathPrefab, transform.position, Quaternion.identity);
+            Destroy(deathEffect, 1f);
+
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
             isDestroyed = true;

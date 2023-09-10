@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Plot : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class Plot : MonoBehaviour
     // public Tower tower;
     public Turret turret;
     private Color startColor;
-    public IceTower iceTower;
-
     private void Start()
     {
         startColor = sr.color;
@@ -30,7 +29,7 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // Debug.Log("Build tower here" + name);
+        // Debug.Log("Build on plot " + name);
         // Debug.Log(turret == null);
 
         if (turret != null)
@@ -45,8 +44,7 @@ public class Plot : MonoBehaviour
         {
             Debug.Log("Not enough gold");
             return;
-        }
-
+        }       
         ResetPlot();
 
         LevelManager.main.SpendCurrency(towerToBuild.cost);
