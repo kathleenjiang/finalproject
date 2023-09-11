@@ -196,7 +196,6 @@ public class Turret : MonoBehaviour
 
         plot.ResetPlot();
         StartCoroutine(playAudioAndDestroy());
-        // Destroy(gameObject); // delete turret
     }
 
     IEnumerator playAudioAndDestroy()
