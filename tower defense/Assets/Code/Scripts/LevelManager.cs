@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -39,7 +40,6 @@ public class LevelManager : MonoBehaviour
 
         if (health <= 0)
         {
-            // Game Over logic can be added here
             Debug.Log("Game Over");
             GameOver();
         }
@@ -80,7 +80,6 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Insufficient Funds");
             return false;
         }
     }

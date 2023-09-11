@@ -394,7 +394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7030158488314631871
 Transform:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   slowEffectPrefab: {fileID: 7774144777050086854, guid: d1059f58a98cb19408e27e43b43eed8c, type: 3}
-  targetingRange: 2
+  targetingRange: 3.5
   attackSpeed: 0.5
   freezeTime: 1
 --- !u!114 &6734479531554838512
