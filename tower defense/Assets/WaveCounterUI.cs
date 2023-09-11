@@ -8,7 +8,7 @@ public class WaveCounterUI : MonoBehaviour
     [SerializeField] EnemySpawner enemySpawner; // Reference to the specific EnemySpawner instance
 
     private void OnGUI() {
-        waveUI.text = "Wave: " + enemySpawner.currentWave.ToString() + "/20";
+        waveUI.text = "Wave: " + enemySpawner.currentWave.ToString() + "/8";
     }
 
     public void SetSelected() {

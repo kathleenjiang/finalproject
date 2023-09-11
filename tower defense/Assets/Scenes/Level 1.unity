@@ -7598,7 +7598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 79.97943, y: -21.810486}
+  m_AnchoredPosition: {x: -21, y: 30}
   m_SizeDelta: {x: -896.0586, y: -381.6812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405525648
@@ -8249,7 +8249,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -10022,7 +10022,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -13167,7 +13167,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -13276,7 +13276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 79.97943, y: -21.810486}
+  m_AnchoredPosition: {x: -21.000061, y: 30.000061}
   m_SizeDelta: {x: -896.0586, y: -381.6812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655001535
@@ -19199,7 +19199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (150)
+  m_text: (300)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
   m_sharedMaterial: {fileID: 6331273140843804052, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
@@ -21448,7 +21448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (150)
+  m_text: (200)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
   m_sharedMaterial: {fileID: 6331273140843804052, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
@@ -22550,7 +22550,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -26128,7 +26128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 558.27, y: 246.75}
+  m_AnchoredPosition: {x: 467, y: 265}
   m_SizeDelta: {x: 100, y: 106.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317148325
@@ -28393,7 +28393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (150)
+  m_text: (5000)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
   m_sharedMaterial: {fileID: 6331273140843804052, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
@@ -32178,7 +32178,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.85098046, g: 0.6039216, b: 0.6039216, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -33175,7 +33175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 79.97943, y: -21.810486}
+  m_AnchoredPosition: {x: -21.000061, y: 30.000061}
   m_SizeDelta: {x: -896.0586, y: -381.6812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1728496837
@@ -33319,7 +33319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (150)
+  m_text: (100)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
   m_sharedMaterial: {fileID: 6331273140843804052, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
@@ -36393,7 +36393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (150)
+  m_text: (10000)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
   m_sharedMaterial: {fileID: 6331273140843804052, guid: f0a7e7d5fcda053488dd84f63c746205, type: 2}
@@ -39805,12 +39805,14 @@ MonoBehaviour:
   easyEnemies:
   - {fileID: 3435962575939222057, guid: 52e2b11620bf4b342b1826bb58d66f9e, type: 3}
   - {fileID: 3435962575939222057, guid: 93a6dc98ec53b2e46ad9f1dd3a72fe4f, type: 3}
-  - {fileID: 3435962575939222057, guid: 0cc008299d5938443a187318dae3ca01, type: 3}
+  - {fileID: 3435962575939222057, guid: ed638a4c04ae96846b5e2cebfd4f28d0, type: 3}
+  - {fileID: 3435962575939222057, guid: 6b507752996b2ee49ad0f01e19afeb4a, type: 3}
   mediumEnemies:
   - {fileID: 3435962575939222057, guid: 6767723a2b7788041898b49846f9b52f, type: 3}
   - {fileID: 3435962575939222057, guid: 1dcaad43aad1e1549b3959702e4a5895, type: 3}
   - {fileID: 3435962575939222057, guid: fbda95ec76dafe3499f49e86e65fbc98, type: 3}
   - {fileID: 3435962575939222057, guid: 31ec235526eccf64f99992736c441f49, type: 3}
+  - {fileID: 3435962575939222057, guid: 0cc008299d5938443a187318dae3ca01, type: 3}
   hardEnemies:
   - {fileID: 2003930477275005993, guid: fca937164a98d8b4d85b2e395fce3a55, type: 3}
   - {fileID: 3435962575939222057, guid: f73b7e36fcd6e30418ce3953c70f2e62, type: 3}
