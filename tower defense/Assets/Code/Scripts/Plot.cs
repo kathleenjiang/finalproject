@@ -44,7 +44,7 @@ public class Plot : MonoBehaviour
         {
             Debug.Log("Not enough gold");
             return;
-        }       
+        }
         ResetPlot();
 
         LevelManager.main.SpendCurrency(towerToBuild.cost);

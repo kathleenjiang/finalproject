@@ -9,7 +9,7 @@ public class IceTower : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject slowEffectPrefab;
 
-    [Header("Attribute")]   
+    [Header("Attribute")]
     [SerializeField] public float targetingRange = 5f;
     [SerializeField] private float attackSpeed = 4f;    //attacks per second
     [SerializeField] private float freezeTime = 1f;
@@ -17,21 +17,26 @@ public class IceTower : MonoBehaviour
 
     private float timeUntilFire;
 
-    private void Update() {
+    private void Update()
+    {
         timeUntilFire += Time.deltaTime;
 
-        if(timeUntilFire >= 1f / attackSpeed) {
+        if (timeUntilFire >= 1f / attackSpeed)
+        {
             Freeze();
             timeUntilFire = 0f;
         }
     }
 
-    private void Freeze() {
+    private void Freeze()
+    {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)
         transform.position, 0f, enemyMask);
 
-        if (hits.Length > 0) {
-            for (int i = 0; i < hits.Length; i++) {
+        if (hits.Length > 0)
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
                 RaycastHit2D hit = hits[i];
 
                 EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
@@ -46,14 +51,16 @@ public class IceTower : MonoBehaviour
             }
         }
     }
-    
-    private IEnumerator ResetEnemySpeed(EnemyMovement em) {
+
+    private IEnumerator ResetEnemySpeed(EnemyMovement em)
+    {
         yield return new WaitForSeconds(freezeTime);
 
         em.ResetSpeed();
     }
 
-    private void OnDrawGizmosSelected() {
+    private void OnDrawGizmosSelected()
+    {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
