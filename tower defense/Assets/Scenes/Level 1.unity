@@ -5042,8 +5042,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 982.12, y: -444.64}
-  m_SizeDelta: {x: 1964.2, y: -889.29}
+  m_AnchoredPosition: {x: 960.01, y: -444.64}
+  m_SizeDelta: {x: 1920, y: -889.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &248329793
 MonoBehaviour:
@@ -14858,7 +14858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 842.8, y: 468.8199}
+  m_AnchoredPosition: {x: 801.8, y: 473.8199}
   m_SizeDelta: {x: 283.5919, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746004434
@@ -17755,8 +17755,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -815.18005, y: 0}
-  m_SizeDelta: {x: -1630.4, y: 0}
+  m_AnchoredPosition: {x: -804.14, y: 0}
+  m_SizeDelta: {x: -1608.3, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872106994
 MonoBehaviour:
@@ -21814,7 +21814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 651, y: 472}
+  m_AnchoredPosition: {x: 610, y: 477}
   m_SizeDelta: {x: 100, y: 106.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1022132589
@@ -39812,6 +39812,7 @@ MonoBehaviour:
   - {fileID: 3435962575939222057, guid: fbda95ec76dafe3499f49e86e65fbc98, type: 3}
   - {fileID: 3435962575939222057, guid: 31ec235526eccf64f99992736c441f49, type: 3}
   - {fileID: 3435962575939222057, guid: 0cc008299d5938443a187318dae3ca01, type: 3}
+  - {fileID: 3435962575939222057, guid: 9ae3f80dce6325642b0112f4bb8037e7, type: 3}
   hardEnemies:
   - {fileID: 2003930477275005993, guid: fca937164a98d8b4d85b2e395fce3a55, type: 3}
   - {fileID: 3435962575939222057, guid: f73b7e36fcd6e30418ce3953c70f2e62, type: 3}
@@ -39842,16 +39843,16 @@ MonoBehaviour:
     cost: 100
     prefab: {fileID: 3102752703311918323, guid: ab9890e43ac331649927ffd653b455b4, type: 3}
   - name: Snipe Turret
-    cost: 50
+    cost: 200
     prefab: {fileID: 3102752703311918323, guid: 19abf3de8cb567842bd7631221330089, type: 3}
   - name: Ice Turret
-    cost: 50
+    cost: 300
     prefab: {fileID: 3536443575802085437, guid: 849ee22620be3cf4a831d40b2f1e22f4, type: 3}
   - name: Execution Turret
-    cost: 50
+    cost: 5000
     prefab: {fileID: 3102752703311918323, guid: 17b6d939c4aa17c4c8533a6072336dbe, type: 3}
   - name: Wizard Turret
-    cost: 50
+    cost: 10000
     prefab: {fileID: 3102752703311918323, guid: 39ecb29059a41bb47beee5c915e87714, type: 3}
 --- !u!114 &2132251347
 MonoBehaviour:

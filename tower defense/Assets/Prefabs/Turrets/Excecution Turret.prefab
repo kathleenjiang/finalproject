@@ -545,7 +545,7 @@ MonoBehaviour:
   sellButton: {fileID: 6162772532936017718}
   costText: {fileID: 713734541148405106}
   sellText: {fileID: 8552193775505461307}
-  targetingRange: 2
+  targetingRange: 1.25
   rotationSpeed: 200
   bps: 1
   upgradeCost: 100
@@ -563,7 +563,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 22ae255f737a3854b86be84422831d77, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
