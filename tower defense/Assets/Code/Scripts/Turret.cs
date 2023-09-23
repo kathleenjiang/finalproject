@@ -39,7 +39,9 @@ public class Turret : MonoBehaviour
     private Transform target;
     private float timeUntilFire;
 
-    private int level = 1;
+    // private int level = 1;
+    private int currentUpgradeLevel = 0;
+    private int maxUpgradeLevel = 5;
 
     private void Start()
     {
@@ -131,46 +133,69 @@ public class Turret : MonoBehaviour
     {
         int cost = CalculateCost();
         int nextUpgradeCost = CalculateNextUpgradeCost();
-        if (cost > LevelManager.main.gold) return;
+        if (cost > LevelManager.main.gold || currentUpgradeLevel >= maxUpgradeLevel) return;
 
         LevelManager.main.SpendCurrency(cost);
 
-        level++;
+        // level++;
+        currentUpgradeLevel++;
 
         bps = CalculateBPS();
         targetingRange = CalculateRange();
         upgradeSoundEffect.Play();
         CloseUpgradeUI();
 
-        if (costText != null)
+        if (currentUpgradeLevel < maxUpgradeLevel)
         {
-            costText.text = "$" + nextUpgradeCost.ToString(); // cost ui 
+            if (costText != null)
+            {
+                costText.text = "$" + nextUpgradeCost.ToString(); // cost ui 
+            }
+        }
+        else
+        {
+            if (costText != null)
+            {
+                costText.text = "Maxed";
+            }
         }
     }
 
     private float CalculateBPS()
     {
-        return bpsBase * Mathf.Pow(level, 0.5f);
+        return bpsBase * Mathf.Pow(currentUpgradeLevel, 0.5f);
     }
 
     private float CalculateRange()
     {
-        return targetingRangeBase * Mathf.Pow(level, 0.4f);
+        return targetingRangeBase * Mathf.Pow(currentUpgradeLevel, 0.4f);
     }
 
     private int CalculateCost()
     {
-        return Mathf.RoundToInt(upgradeCost * Mathf.Pow(level, 0.75f));
+        float costMultiplier = 1.5f; 
+        return Mathf.RoundToInt(upgradeCost * Mathf.Pow(costMultiplier, currentUpgradeLevel));
     }
 
     private int CalculateNextUpgradeCost()
     {
-        return Mathf.RoundToInt(upgradeCost * Mathf.Pow(level + 1, 0.75f)); // to display next upgrade cost
+        float costMultiplier = 1.5f; 
+        return Mathf.RoundToInt(upgradeCost * Mathf.Pow(costMultiplier, currentUpgradeLevel + 1));
     }
 
     public int CalculateSell()
     {
-        return Mathf.RoundToInt(upgradeCost * 0.5f);
+        // return Mathf.RoundToInt(upgradeCost * 0.5f);
+        if (currentUpgradeLevel < maxUpgradeLevel)
+        {
+            // When the upgrade level is below the cap, sell for half of the current upgrade cost.
+            return Mathf.RoundToInt(upgradeCost * 0.5f);
+        }
+        else
+        {
+            // When the upgrade level exceeds the cap, sell for half of the capped upgrade cost.
+            return Mathf.RoundToInt(CalculateNextUpgradeCost() * 0.5f);
+        }
     }
 
     private void OnDrawGizmosSelected()

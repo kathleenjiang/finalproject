@@ -14,6 +14,10 @@ public class IceTower : MonoBehaviour
     [SerializeField] private float attackSpeed = 4f;    //attacks per second
     [SerializeField] private float freezeTime = 1f;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource hitSoundEffect;
+
+
 
     private float timeUntilFire;
 
@@ -35,6 +39,7 @@ public class IceTower : MonoBehaviour
 
         if (hits.Length > 0)
         {
+            hitSoundEffect.Play();
             for (int i = 0; i < hits.Length; i++)
             {
                 RaycastHit2D hit = hits[i];

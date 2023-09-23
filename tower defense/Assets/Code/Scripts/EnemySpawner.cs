@@ -105,12 +105,12 @@ public class EnemySpawner : MonoBehaviour
         timeSinceLastSpawn = 0f;
         currentWave++;
 
-        if (currentWave == 7)
+        if (currentWave == 20)
         {
             SpawnBoss();
         }
 
-        if (currentWave > 7 && enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        if (currentWave > 20 && enemiesAlive == 0 && enemiesLeftToSpawn == 0)
         {
             gameState = GameState.Finished;
         }
@@ -124,12 +124,12 @@ public class EnemySpawner : MonoBehaviour
         GameObject prefabToSpawn;
 
         // Determine enemy type based on wave difficulty
-        if (currentWave <= 2)
+        if (currentWave <= 5)
         {
             index = Random.Range(0, easyEnemies.Length);
             prefabToSpawn = easyEnemies[index];
         }
-        else if (currentWave <= 5)
+        else if (currentWave <= 10)
         {
             index = Random.Range(0, mediumEnemies.Length);
             prefabToSpawn = mediumEnemies[index];

@@ -9,7 +9,7 @@ public class WaveCounterUI : MonoBehaviour
 
     private void OnGUI()
     {
-        waveUI.text = "Wave: " + enemySpawner.currentWave.ToString() + "/8";
+        waveUI.text = "Wave: " + enemySpawner.currentWave.ToString() + "/20";
     }
 
     public void SetSelected()

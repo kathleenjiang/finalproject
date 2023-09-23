@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         //initial player stats
-        gold = 100;
+        gold = 9100;
         health = 50;
         gameOverMenu.SetActive(false);
     }
